@@ -1,0 +1,512 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+MG Fitness
+{% endblock title %}
+
+{% block username %}{{request.user.username}}{% endblock username %}
+{% block username2 %}{{request.user.username}}{% endblock username2 %}
+{% block username3 %}{{request.user.username}}{% endblock username3 %}
+
+
+
+{% block header %}
+{% include "header.html" %}
+{% endblock header %}
+
+  {% block mainBody %}
+  
+  <section class="service_section layout_padding" id="service">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Why join us ?
+        </h2>
+      </div>
+    </div>
+    <div class="container ">
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="/static/images/s1.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Modern tools
+              </h4>
+              <p>
+                We have all the modern necessary tools available.
+              </p>
+              <a href="">
+                Read More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="/static/images/s2.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Dedicated sessions for women
+              </h4>
+              <p>
+                We provide dedicated sessions for women at noon everyday.
+              </p>
+              <a href="">
+                Read More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ">
+          <div class="box ">
+            <div class="img-box">
+              <img src="/static/images/s3.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Experienced trainer
+              </h4>
+              <p>
+                Here at MG Fitness you are gonna get experienced trainers for your growth.
+              </p>
+              <a href="">
+                Read More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="/static/images/s4.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Air conditioning
+              </h4>
+              <p>
+                We have fully air conditioned training and body building campus.
+              </p>
+              <a href="">
+                Read More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="/static/images/s5.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Personalized diet plans
+              </h4>
+              <p>
+                We provide personalized diet for all our members for any type of growth they need.
+              </p>
+              <a href="">
+                Read More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="/static/images/s6.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Perfect environment
+              </h4>
+              <p>
+                We have necessary environment needed for your growth, here at MG Fitness.
+              </p>
+              <a href="">
+                Read More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding-bottom">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Us
+              </h2>
+            </div>
+            <p>
+              At MG Fitness, our mission is to empower and inspire individuals of all fitness levels to lead healthier lives. We believe that fitness is not just about looking good, but about feeling strong, confident, and full of vitality. We are here to provide you with the tools, knowledge, and support to make your fitness aspirations a reality.</p>
+            <a href="/about">
+              Read More
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="/static/images/indoorBike.png" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+  <!-- server section -->
+
+  <section class="server_section">
+    <div class="container ">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="/static/images/server-img.jpg" alt="">
+            <div class="play_btn">
+              <button>
+                <i class="fa fa-play" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Let us help you to improve your body.
+              </h2>
+              <p>
+                Join us today. At MG Fitness, we're committed to helping you achieve your fitness goals and lead a healthier, more active life. Our state-of-the-art gym facility, dedicated team of experienced trainers, and a passion for promoting well-being set us apart as the ultimate fitness destination.
+              </p>
+            </div>
+            <a href="/login">
+              Join Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end server section -->
+
+  <!-- price section -->
+
+  <section class="price_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Membership plans
+        </h2>
+      </div>
+      <div class="price_container ">
+        <div class="box">
+          <div class="detail-box">
+            <h2>₹ <span>500</span></h2>
+            <h6>
+              Monthly Membership
+            </h6>
+            <ul class="price_features">
+              <li>
+                Become a member of MG Fitness for a month.
+              </li>
+              <li>
+                Access to our health related blogs.
+              </li>
+              <li>
+                Diet plans
+              </li>
+              <li>
+                Exercise help
+              </li>
+            </ul>
+          </div>
+          <div class="btn-box">
+            <a href="">
+              Purchase
+            </a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="detail-box">
+            <h2>₹ <span>6000</span></h2>
+            <h6>
+              Yearly membership
+            </h6>
+            <ul class="price_features">
+              <li>
+                Become a member of MG Fitness for a month.
+              </li>
+              <li>
+                Access to our health related blogs.
+              </li>
+              <li>
+                Diet plans
+              </li>
+              <li>
+                Exercise help
+              </li>
+              <li>
+                A trip for all the members.
+              </li>
+              <li>
+                24/7 support
+              </li>
+            </ul>
+          </div>
+          <div class="btn-box">
+            <a href="">
+              Purchase
+            </a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="detail-box">
+            <h2>₹ <span>2000</span></h2>
+            <h6>
+              3 month Membership
+            </h6>
+            <ul class="price_features">
+              <li>
+                Become a member of MG Fitness for a month.
+              </li>
+              <li>
+                Access to our health related blogs.
+              </li>
+              <li>
+                Diet plans
+              </li>
+              <li>
+                Exercise help
+              </li>
+            </ul>
+          </div>
+          <div class="btn-box">
+            <a href="">
+              Purchase
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- price section -->
+
+  <!-- client section -->
+
+
+  {% comment %} Testimonial section {% endcomment %}
+
+
+
+  {% comment %} <section class="client_section ">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Testimonial
+        </h2>
+        <p>
+          Even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to
+        </p>
+      </div>
+    </div>
+    <div class="container px-0">
+      <div id="customCarousel2" class="carousel  slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="/static/images/client.jpg" alt="">
+                    </div>
+                    <div class="detail-box">
+                      <div class="client_info">
+                        <div class="client_name">
+                          <h5>
+                            Morojink
+                          </h5>
+                          <h6>
+                            Customer
+                          </h6>
+                        </div>
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                      </div>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum
+                        dolore eu fugia
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="/static/images/client.jpg" alt="">
+                    </div>
+                    <div class="detail-box">
+                      <div class="client_info">
+                        <div class="client_name">
+                          <h5>
+                            Morojink
+                          </h5>
+                          <h6>
+                            Customer
+                          </h6>
+                        </div>
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                      </div>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum
+                        dolore eu fugia
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="/static/images/client.jpg" alt="">
+                    </div>
+                    <div class="detail-box">
+                      <div class="client_info">
+                        <div class="client_name">
+                          <h5>
+                            Morojink
+                          </h5>
+                          <h6>
+                            Customer
+                          </h6>
+                        </div>
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                      </div>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum
+                        dolore eu fugia
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel_btn-box">
+          <a class="carousel-control-prev" href="#customCarousel2" role="button" data-slide="prev">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#customCarousel2" role="button" data-slide="next">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section> {% endcomment %}
+  <!-- end client section -->
+
+  <!-- contact section -->
+
+  <br>
+  <br>
+  <section class="contact_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Get In Touch With Us
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-lg-6 mx-auto">
+          <div class="form_container">
+            <form action="">
+              <div>
+                <input type="text" placeholder="Your Name" />
+              </div>
+              <div>
+                <input type="email" placeholder="Your Email" />
+              </div>
+              <div>
+                <input type="text" placeholder="Your Phone" />
+              </div>
+              <div>
+                <input type="text" class="message-box" placeholder="Message" />
+              </div>
+              <div class="btn_box ">
+                <button>
+                  SEND
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% endblock mainBody %}
