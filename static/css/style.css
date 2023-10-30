@@ -269,6 +269,7 @@ a:focus {
           align-items: center;
   padding-top: 45px;
   padding-bottom: 90px;
+  
 }
 
 .slider_section .row {
@@ -1048,5 +1049,19 @@ a:focus {
 
 .img-box img{
   border-radius: 50%;
+}
+
+.mgf{
+  position:absolute;
+  top:50px;
+}
+.mgf h1,.mgf{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:3rem;
+  color: #d4af37;
+  text-decoration: none;
+}
+.mgf h1 p{
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */

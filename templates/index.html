@@ -6,9 +6,6 @@
 MG Fitness
 {% endblock title %}
 
-{% block username %}{{request.user.username}}{% endblock username %}
-{% block username2 %}{{request.user.username}}{% endblock username2 %}
-{% block username3 %}{{request.user.username}}{% endblock username3 %}
 
 
 
@@ -17,7 +14,9 @@ MG Fitness
 {% endblock header %}
 
   {% block mainBody %}
-  
+
+
+  {% comment %} {% block userTitle %}{{request.user}}{% endblock userTitle %} {% endcomment %}
   <section class="service_section layout_padding" id="service">
     <div class="container">
       <div class="heading_container heading_center">

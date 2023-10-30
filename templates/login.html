@@ -95,15 +95,37 @@
   color: black;
   cursor: pointer;
 }
+.mgf{
+  position:absolute;
+  top:50px;
+}
+.mgf h1,.mgf{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:3rem;
+  color: #d4af37;
+  text-decoration: none;
+}
+.mgf h1 p{
+  font-size: 1.5rem;
+}
     </style>
   </head>
 
   <body class="text-center" data-bs-theme="dark">
+    <a href="/" class="mgf">
+      <h1 class="h3 mb-5 font-weight-normal">
+        {% comment %} <img src="/static/images/MGLOGO.png"> {% endcomment %}
+        MG <br>
+        <p>
+          FITNESS CENTER
+        </p>
+      </h1>
+
+    </a>
     <form class="form-signin" method="POST" action="/login/">
       
       {% csrf_token %}
-
-      <h1 class="h3 mb-5 font-weight-normal">Sign in</h1>
+      <h2 class="h3 mb-5 font-weight-normal">Sign in</h2>
       <input
         type="text"
         class="form-control mb-2"

@@ -133,7 +133,7 @@ APPEND_SLASH = True
 SESSION_COOKIE_AGE = 604800   # a week in seconds
 
 # Expire the session when the user closes the browser
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+# SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 # Clear the session data on logout
 SESSION_CLEAR_ON_LOGOUT = True

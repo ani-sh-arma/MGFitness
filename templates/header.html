@@ -35,9 +35,21 @@
                     <li class="nav-item">
                       <a class="nav-link" href="/contact">Contact Us</a>
                     </li>
+                    {% if user.is_anonymous %}
                     <li class="nav-item">
-                      <a class="nav-link" href="/login">Login</a>
+                      <a class="nav-link" href="/login">
+                        Login
+                      </a>
                     </li>
+                    
+                    {% else %}
+                    <li class="nav-item">
+                      <a class="nav-link" href="/logout">
+                        Logout
+                      </a>
+                    </li>
+                        
+                        {% endif %}
                   </ul>
                   <div class="quote_btn-container">
                     <!-- <form class="form-inline">
@@ -46,9 +58,9 @@
                       </button>
                     </form> -->
                     <a href="">
-                      <i class="fa fa-phone" aria-hidden="true"></i>
-                      <span>
-                        Call : +91 1212121212
+                      {% comment %} <i class="fa fa-phone" aria-hidden="true"></i> {% endcomment %}
+                      <span style="text-transform:none; ">
+                        {{request.user}}
                       </span>
                     </a>
                   </div>
