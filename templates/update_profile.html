@@ -1,0 +1,28 @@
+<!-- update_profile.html -->
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}" />
+{% endblock links %}
+
+{% block title %}
+Update Profile
+{% endblock title %}
+
+{% block header %}
+{% include "nav.html" %}
+{% endblock header %}
+
+{% block mainBody %}
+<section class="service_section layout_padding" style="display: grid;place-items: center;">
+
+    <div class="update">
+        <form method="post" action="{% url 'update_profile' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</section>
+{% endblock mainBody %}

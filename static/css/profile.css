@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center; /* Use justify-content instead of justify-items */
+    flex-direction: row; /* Align items vertically in the center */
+    text-align: center; /* Align text inside the container */
+}
+
+#update {
+    margin-bottom: 10px;
+    margin-left: 300px;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto; /* Adjust this based on content height */
+    gap: 10px; /* Adjust the gap between grid items */
+    border: 1px solid #ccc; /* Add a 1px thin border */
+    padding: 10px; /* Add some padding to the wrapper */
+    margin-bottom: 10px; /* Add margin to separate the wrapper and address */
+}
+
+.wrapper > div {
+    padding: 8px; /* Add padding to the individual grid items */
+    border-bottom: 1px solid #ccc; /* Add a bottom border to separate rows */
+}
+
+p {
+    /* width: calc(100% - 22px);  */
+    border: 1px solid #ccc; /* Add a 1px thin border */
+    padding: 10px; /* Add some padding to the address */
+    box-sizing: border-box; /* Include padding and border in the total width/height */
+}

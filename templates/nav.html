@@ -27,31 +27,50 @@
                       <a class="nav-link" href="/about"> About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/service">Services</a>
-                    </li>
-                    <li class="nav-item">
                       <a class="nav-link" href="/price">Pricing</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="/contact">Contact Us</a>
                     </li>
+
+                    {% if user.is_authenticated and user.is_staff %}
                     <li class="nav-item">
-                      <a class="nav-link" href="/login">Login</a>
+                      <a class="nav-link" href="/admin">Admin</a>
                     </li>
+
+                    {% else %}
+                    
+                    
+                    {% endif %}
+
+
+
+                    {% if user.is_anonymous %}
+                    <li class="nav-item">
+                      <a class="nav-link" href="/login">
+                        Login
+                      </a>
+                    </li>
+                    
+                    {% else %}
+                    <li class="nav-item">
+                      <a class="nav-link" href="/logout">
+                        Logout
+                      </a>
+                    </li>
+                        
+                        {% endif %}
                   </ul>
                   <div class="quote_btn-container">
-                    <!-- <form class="form-inline">
-                      <button class="btn   nav_search-btn" type="submit">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                      </button>
-                    </form> -->
-                    <a href="">
+                    <a href="{% url 'profile' %}">
                       {% comment %} <i class="fa fa-phone" aria-hidden="true"></i> {% endcomment %}
-                      <span style="text-transform:none; font-family:impact;">
-                        {{request.user}}
+                      <span style="text-transform:none; ">
+                        {{ user }}
                       </span>
                     </a>
                   </div>
+
+                  
                 </div>
               </nav>
             </div>

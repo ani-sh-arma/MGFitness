@@ -28,23 +28,29 @@ Contact Us
       <div class="row">
         <div class="col-md-8 col-lg-6 mx-auto">
           <div class="form_container">
-            <form action="">
+            <form action="{% url "contact_mail" %}" method="POST">
+
+
+              {% csrf_token %}
+
               <div>
-                <input type="text" placeholder="Your Name" />
+                <input type="text" placeholder="Your Name" name="name"/>
               </div>
               <div>
-                <input type="email" placeholder="Your Email" />
+                <input type="email" placeholder="Your Email" name="email"/>
               </div>
               <div>
-                <input type="text" placeholder="Your Phone" />
+                <input type="text" placeholder="Your Phone" name="phone"/>
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="Message" />
+                <input type="text" class="message-box" placeholder="Message" name="message"/>
               </div>
               <div class="btn_box ">
-                <button>
-                  SEND
-                </button>
+                {% comment %} <a >  {% endcomment %}
+                  <button>
+                    SEND
+                  </button>
+                {% comment %} </a> {% endcomment %}
               </div>
             </form>
           </div>

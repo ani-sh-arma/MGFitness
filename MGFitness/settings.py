@@ -32,7 +32,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'home',
-    'django.contrib.admin',
+    'material',
+    'material.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -129,6 +131,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 APPEND_SLASH = True
 
+# settings.py
+
+LOGIN_REDIRECT_URL = 'index'  # Change this to your desired redirect URL
+
+
 # Set session expiration to a desired time (in seconds)
 SESSION_COOKIE_AGE = 604800   # a week in seconds
 
@@ -137,3 +144,38 @@ SESSION_COOKIE_AGE = 604800   # a week in seconds
 
 # Clear the session data on logout
 SESSION_CLEAR_ON_LOGOUT = True
+
+STRIPE_PUBLISHABLE_KEY = "pk_test_51OKdDUSF5zr91hwv5WpFdbISkbXObaG7XdWF2RU9N9C8tv8E1tCjYYMTPMEvGV7xpJagMpHWWexin6sDC0QRiQWC00kg431266"
+STRIPE_SECRET_KEY = "sk_test_51OKdDUSF5zr91hwvEgvdzzoBrnIgC8vXncowGimVw769t90vJ66TIi3jjNjg8NyqFNK0QSlfajNBEdOYR4bKPo1700ZtuxDv83"
+
+
+# settings.py
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = '22amtics042@gmail.com'
+EMAIL_HOST_PASSWORD = 'iblp trlj eppc ymta'
+
+# FOR MATERIAL UI CUSTOMIZATION
+MATERIAL_ADMIN_SITE = {
+    'HEADER':  'MG Fitness',  # Admin site header
+    'TITLE':  'MG Fitness',
+    'FAVICON':  'images/logo-3.png',  # Admin site favicon (path to static should be specified)
+    'MAIN_BG_COLOR':  '#020230',  # Admin site main color, css color should be specified
+    'MAIN_HOVER_COLOR':  '#020230',  # Admin site main hover color, css color should be specified
+    'PROFILE_PICTURE':  'images/MGFITNESS.png',  # Admin site profile picture (path to static should be specified)
+    'PROFILE_BG':  'images/bg.png',  # Admin site profile background (path to static should be specified)
+    'LOGIN_LOGO':  'images/MGFITNESS.png',  # Admin site logo on login page (path to static should be specified)
+    'LOGOUT_BG':  'images/bg.png',  # Admin site background on login/logout pages (path to static should be specified)
+    'SHOW_THEMES':  True,  #  Show default admin themes button
+    'TRAY_REVERSE': False,  # Hide object-tools and additional-submit-line by default
+    'NAVBAR_REVERSE': True,  # Hide side navbar by default
+    'SHOW_COUNTS': True, # Show instances counts for each model
+    # 'APP_ICONS': {  # Set icons for applications(lowercase), including 3rd party apps, {'application_name': 'material_icon_name', ...}
+    #     'sites': 'send',
+    # },
+    # 'MODEL_ICONS': {  # Set icons for models(lowercase), including 3rd party models, {'model_name': 'material_icon_name', ...}
+    #     'site': 'contact_mail',
+    # }
+}

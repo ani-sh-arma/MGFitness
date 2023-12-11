@@ -28,7 +28,7 @@ Memberships
       <div class="price_container ">
         <div class="box">
           <div class="detail-box">
-            <h2>₹ <span>500</span></h2>
+            <h2>₹ <span>1000</span></h2>
             <h6>
               Monthly Membership
             </h6>
@@ -48,7 +48,7 @@ Memberships
             </ul>
           </div>
           <div class="btn-box">
-            <a href="">
+            <a href="#">
               Purchase
             </a>
           </div>
@@ -82,7 +82,7 @@ Memberships
             </ul>
           </div>
           <div class="btn-box">
-            <a href="">
+            <a href="#">
               Purchase
             </a>
           </div>
@@ -110,7 +110,7 @@ Memberships
             </ul>
           </div>
           <div class="btn-box">
-            <a href="">
+            <a href="#" id="purchase">
               Purchase
             </a>
           </div>
@@ -119,4 +119,30 @@ Memberships
       </div>
     </div>
   </section>
+  
+
+
+  <script src="https://js.stripe.com/v3/"></script>
+
+
+  <script>
+
+    var stripe = Stripe('{{stripe_publishable_key}}')
+
+      const purchase = document.querySelector('#purchase');
+
+        purchase.addEventListener('click', event => {
+
+            
+        stripe.redirectToCheckout({
+            sessionId: '{{ session_id }}'
+        }).then(function(result) {
+            // Handle result if needed
+        });
+        
+
+      });
+
+  </script>
+
   {% endblock mainBody %}

@@ -20,6 +20,10 @@
   </style>
 
 
+  {% block links %}
+  {% endblock links %}
+
+
 
   <title>
     {% block title %}
@@ -29,7 +33,7 @@
   {% block styles %}{% endblock styles %}
 
 
-  <!-- bootstrap core css -->
+
   <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
 
   <!-- fonts style -->
@@ -85,19 +89,19 @@
               Address
             </h4>
             <div class="contact_link_box">
-              <a href="">
+              <a href="https://www.google.com/maps/place/MG+Fitness,/@21.1206283,72.839346,17z/data=!4m6!3m5!1s0x3be0513346dc8779:0x26763c2c0da17ea0!8m2!3d21.1206287!4d72.8419195!16s%2Fg%2F11fkmtcmc5?entry=ttu">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
                   Location
                 </span>
               </a>
-              <a href="">
+              <a href="about">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  Call +91 8141512736
                 </span>
               </a>
-              <a href="">
+              <a href="about">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
                   demo@gmail.com
@@ -134,10 +138,10 @@
                 <img src="/static/images/nav-bullet.png" alt="">
                 About
               </a>
-              <a class="" href="/service">
+              {% comment %} <a class="" href="/service">
                 <img src="/static/images/nav-bullet.png" alt="">
                 Services
-              </a>
+              </a> {% endcomment %}
               <a class="" href="/price">
                 <img src="/static/images/nav-bullet.png" alt="">
                 Pricing

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="/static/css/profile.css" />
+{% endblock links %}
+
+{% block title %}
+
+{% if is_member %}
+{{ userData.name }}
+{% else %}
+Profile
+{% endif %}
+
+{% endblock title %}
+
+{% block header %}
+ {% include "nav.html" %}
+{% endblock header %}
+
+{% block mainBody %}
+<!-- about section -->
+<section class="service_section layout_padding" style="display: grid;place-items: center;">
+
+  <div class="container">
+    {% if is_member %}
+      <span>
+        <h3>Name: {{ userData.name }}</h3>
+      </span>
+      <span id="update"><a href="{% url 'update_profile' %}"><button class="btn btn-primary">Update</button></a></span>
+      
+    </div>
+    
+    <div class="wrapper">
+      <div>Card No: {{ userData.card_no }}</div>
+      <div>Email: {{ user.email }}</div>
+      <div>Phone: {{ userData.phone }}</div>
+      <div>Blood group: {{ userData.blood_group }}</div>
+      <div>Address: {{ userData.address }}</div>
+      <div>Weight: {{ userData.weight }}</div>
+      <div>Height: {{ userData.height }}</div>
+      <div>Biceps: {{ userData.biceps }}</div>
+    </div>
+
+    {% else %}
+    <h2>You are not a member! <br> <a href="{% url "price" %}">Join us right now.</a>
+      </h2>
+      {% endif %}
+
+</section>
+{% endblock mainBody %}

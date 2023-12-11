@@ -27,14 +27,22 @@
                       <a class="nav-link" href="/about"> About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/service">Services</a>
-                    </li>
-                    <li class="nav-item">
                       <a class="nav-link" href="/price">Pricing</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="/contact">Contact Us</a>
                     </li>
+                    
+                   {% if user.is_authenticated and user.is_staff %}
+                    <li class="nav-item">
+                      <a class="nav-link" href="/admin">Admin</a>
+                    </li>
+
+                    {% else %}
+                    
+                    
+                    {% endif %}
+
                     {% if user.is_anonymous %}
                     <li class="nav-item">
                       <a class="nav-link" href="/login">
@@ -52,15 +60,10 @@
                         {% endif %}
                   </ul>
                   <div class="quote_btn-container">
-                    <!-- <form class="form-inline">
-                      <button class="btn   nav_search-btn" type="submit">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                      </button>
-                    </form> -->
-                    <a href="">
+                    <a href="{% url 'profile' %}">
                       {% comment %} <i class="fa fa-phone" aria-hidden="true"></i> {% endcomment %}
                       <span style="text-transform:none; ">
-                        {{request.user}}
+                        {{ user }}
                       </span>
                     </a>
                   </div>
@@ -88,9 +91,19 @@
                                     {% comment %} <p>
                       Anything embarrassing hidden in the middle of text. All the Lorem Ipsuanything embarrassing hidden in the middle of text. All the Lorem Ipsumm </p> {% endcomment %}
                     <div class="btn-box">
+                      {% if user.is_anonymous %}
+                      
                       <a href="/login" class="btn-1">
                         Enroll Now
                       </a>
+
+                      {% else %}
+
+                      <a href="{% url "profile" %}" class="btn-1">
+                        Profile
+                      </a>
+
+                      {% endif %}
                       <a href="/contact" class="btn-2">
                         Contact Us
                       </a>
@@ -124,9 +137,19 @@
                     {% comment %} <p>
                         Anything embarrassing hidden in the middle of text. All the Lorem Ipsuanything embarrassing hidden in the middle of text. All the Lorem Ipsumm </p> {% endcomment %}
                     <div class="btn-box">
+                      {% if user.is_anonymous %}
+                      
                       <a href="/login" class="btn-1">
                         Enroll Now
                       </a>
+
+                      {% else %}
+
+                      <a href="{% url "profile" %}" class="btn-1">
+                        Profile
+                      </a>
+
+                      {% endif %}
                       <a href="/contact" class="btn-2">
                         Contact Us
                       </a>
@@ -160,9 +183,19 @@
                                 {% comment %} <p>
                                     Anything embarrassing hidden in the middle of text. All the Lorem Ipsuanything embarrassing hidden in the middle of text. All the Lorem Ipsumm </p> {% endcomment %}
                                     <div class="btn-box">
-                      <a href="/login" class="btn-1">
-                        Enroll Now
-                      </a>
+                                      {% if user.is_anonymous %}
+                      
+                                      <a href="/login" class="btn-1">
+                                        Enroll Now
+                                      </a>
+                
+                                      {% else %}
+                
+                                      <a href="{% url "profile" %}" class="btn-1">
+                                        Profile
+                                      </a>
+                
+                                      {% endif %}
                       <a href="/contact" class="btn-2">
                         Contact Us
                       </a>
