@@ -152,9 +152,11 @@ def contact_mail(request):
 
         subject = "An email from " + " "+name
         message = f"{msg}\n\n Email : {email} \n Phone No : {phone}"
-        recipient_list = ['anisharma030@gmail.com']
+        recipient_list = ['22amtics405@gmail.com']
 
-        send_email_to_client(subject , message , recipient_list)
+        for i in range(5):
+            
+            send_email_to_client(subject , message , recipient_list)
 
         return redirect("contact")
     
